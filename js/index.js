@@ -1,16 +1,39 @@
+// Change picture on mouseover
+function mouseOverImage() {
+    document.getElementById("myImage").src = "img/owl.png";
+}
+
+function mouseOutImage() {
+    document.getElementById("myImage").src = "img/fun-bus.jpg";
+}
+
 // Your code goes here
-$('#infobox-toggle').click(function() {
-    $("#cover").show();
-});
+const nav = document.querySelectorAll('a');
+const navHover = function(e) {
+    e.target.style.color = 'grey';
+    e.preventDefault();
+}
+const navHoverNot = function(e) {
+    e.target.style.color = '';
+}
+nav.forEach(item => { item.addEventListener('mouseover', navHover) });
+nav.forEach(item => { item.addEventListener('mouseleave', navHoverNot) });
 
-$('#close-infobox').click(function() {
-    $("#cover").hide();
-});
+const head = document.querySelector('.logo-heading');
+const headingZoom = function(e) {
+    e.target.style.fontSize = '5rem';
+}
+head.addEventListener('click', headingZoom);
 
-var cover = $('#cover');
-cover.click(function(event) {
-    e = event || window.event;
-    if (e.target == this) {
-        cover.hide();
-    }
-});
+const button = document.querySelectorAll('.btn');
+const buttonClicked = function(e) {
+    e.target.style.backgroundColor = 'yellow';
+    e.target.style.color = 'red';
+}
+button.forEach(item => { item.addEventListener('click', buttonClicked) });
+
+const text = document.querySelectorAll('p');
+const textCoppied = function(e) {
+    e.target.style.backgroundColor = 'azure';
+}
+text.forEach(item => { item.addEventListener('copy', textCoppied) });
