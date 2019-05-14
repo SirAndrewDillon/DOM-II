@@ -1,13 +1,23 @@
+let removeImg = document.querySelector('.firstImg')
+removeImg.addEventListener('dblclick', (event) => {
+    event.target.style.visibility = 'hidden'
+})
+
+//********************************************************************/
 const header = document.querySelector('.main-navigation');
 header.addEventListener('mouseover', function() {
     header.style.backgroundColor = 'dodgerblue'
 })
+
+//******************************************************************/
 
 const footeralert = document.querySelector('.footer');
 footeralert.addEventListener('click', function(event) {
     alert('Copyright: CSS Cowboy');
     console.log("Can You Hear Me Now")
 });
+
+//********************************************************************/
 
 const navContent = document.querySelectorAll('.nav-link');
 navContent.forEach(navItem => {
@@ -16,30 +26,49 @@ navContent.forEach(navItem => {
     })
 })
 
+//********************************************************************/
+
 const highlight1 = document.querySelector('.intro');
 highlight1.addEventListener('mouseover', function() {
-    highlight1.style.backgroundColor = 'hotpink';
+    highlight1.style.backgroundColor = 'purple';
 })
+
+//********************************************************************/
 
 const highlight2 = document.querySelector('.content-section');
 highlight2.addEventListener('mouseover', function() {
-    highlight2.style.backgroundColor = 'hotpink';
+    highlight2.style.backgroundColor = 'orange';
 })
+
+//********************************************************************/
 
 const highlight3 = document.querySelector('.inverse-content');
 highlight3.addEventListener('mouseover', function() {
-    highlight3.style.backgroundColor = 'hotpink';
+    highlight3.style.backgroundColor = 'chocolate';
 })
+
+//********************************************************************/
 
 const highlight4 = document.querySelector('.content-destination');
 highlight4.addEventListener('mouseover', function() {
     highlight4.style.backgroundColor = 'hotpink';
 })
 
-const buttons = document.getElementsByClassName('.destination .btn');
-buttons.addEventListener('click', function() {
-    contactbox.style.visibility = 'visible'
+//********************************************************************/
+
+const buttons = document.querySelector('.btn1');
+buttons.addEventListener('click', function(event) {
+    document.querySelector('.bob').style.backgroundColor = 'cyan';
+});
+
+//********************************************************************/
+
+let rightClick = document.querySelector('.content-destination')
+rightClick.addEventListener('contextmenu', () => {
+    alert("yOU DON'T KNOW ME WELL ENOUGH TO RIGHT CLICK ME!")
 })
+
+//******************************************************************/
 
 // const images = document.querySelectorAll('img');
 // images.addEventListener('mouseover', function () {
