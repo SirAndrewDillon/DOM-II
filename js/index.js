@@ -1,39 +1,48 @@
-// Change picture on mouseover
-function mouseOverImage() {
-    document.getElementById("myImage").src = "img/owl.png";
-}
+const header = document.querySelector('.main-navigation');
+header.addEventListener('mouseover', function() {
+    header.style.backgroundColor = 'lightgrey'
+})
 
-function mouseOutImage() {
-    document.getElementById("myImage").src = "img/fun-bus.jpg";
-}
+const footeralert = document.querySelector('.footer');
+footeralert.addEventListener('click', function(event) {
+    alert('Copyright Lambda');
+    console.log("is this working")
+});
 
-// Your code goes here
-const nav = document.querySelectorAll('a');
-const navHover = function(e) {
-    e.target.style.color = 'grey';
-    e.preventDefault();
-}
-const navHoverNot = function(e) {
-    e.target.style.color = '';
-}
-nav.forEach(item => { item.addEventListener('mouseover', navHover) });
-nav.forEach(item => { item.addEventListener('mouseleave', navHoverNot) });
+const navContent = document.querySelectorAll('.nav-link');
+navContent.forEach(navItem => {
+    navItem.addEventListener('click', function() {
+        navItem.style.color = 'red';
+    })
+})
 
-const head = document.querySelector('.logo-heading');
-const headingZoom = function(e) {
-    e.target.style.fontSize = '5rem';
-}
-head.addEventListener('click', headingZoom);
+const highlight1 = document.querySelector('.intro');
+highlight1.addEventListener('mouseover', function() {
+    highlight1.style.backgroundColor = 'lightgreen';
+})
 
-const button = document.querySelectorAll('.btn');
-const buttonClicked = function(e) {
-    e.target.style.backgroundColor = 'yellow';
-    e.target.style.color = 'red';
-}
-button.forEach(item => { item.addEventListener('click', buttonClicked) });
+const highlight2 = document.querySelector('.content-section');
+highlight2.addEventListener('mouseover', function() {
+    highlight2.style.backgroundColor = 'lightgreen';
+})
 
-const text = document.querySelectorAll('p');
-const textCoppied = function(e) {
-    e.target.style.backgroundColor = 'azure';
-}
-text.forEach(item => { item.addEventListener('copy', textCoppied) });
+const highlight3 = document.querySelector('.inverse-content');
+highlight3.addEventListener('mouseover', function() {
+    highlight3.style.backgroundColor = 'lightgreen';
+})
+
+const highlight4 = document.querySelector('.content-destination');
+highlight4.addEventListener('mouseover', function() {
+    highlight4.style.backgroundColor = 'lightgreen';
+})
+
+const buttons = document.getElementsByClassName('.destination .btn');
+buttons.addEventListener('click', function() {
+    contactbox.style.visibility = 'visible'
+})
+
+// const images = document.querySelectorAll('img');
+// images.addEventListener('mouseover', function () {
+//   images.style.border = '5px solid yellow';
+// })
+// console.log(images)
